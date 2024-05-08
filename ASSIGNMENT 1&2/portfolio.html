@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <style>
+		body {
+			background-image: url(PortBackground.jpg);
+			background-size: cover;
+			background-position: left;
+		}
+	</style>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="port.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:ital,ghtge,100,0 ,200;0,300;0,400;0,500; 0,600;0,700;1,100; 1,200;1,300;1,400;1,500;1,600;1,700 displa y-swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://kit.fontawesome.com/62556f7ee3.js" crossorigin="anonymous"></script>
+    </head>
+    <!--top page-->
+    <body>
+        
+        <div class="me">  
+            <nav>
+
+                <h2 class="title">Portfo<span>lio</span></h2>
+                
+                <!--Music  Play-->
+                <audio id="song">
+                    <source src="Vorukasha.mp3" type="audio/mpeg">
+                </audio>
+                <div class="musiccontrol">
+                    <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                    <input type="range" value="0" id="music">
+                </div>
+
+            </nav> 
+
+            <div class="content">
+                <h4>Hello, my name is </h4>
+                <h1>Fazreen</h1>
+                <h3>I'm a Web designer and UTM students</h3>
+                <div class="news">
+                    <form>
+                        <input type="email" name="email" id="mail" placeholder="Enter Your Email">
+                        <input type="submit" naem="submit" value="Click">
+                      </form>
+                    </div>
+            </div>
+        </div>
+        <!--About ME-->
+        <section class="about">
+            
+            <div class="main">
+                <img src="gambar2.png">
+                <div class="abouttext">
+                    <h2>About Me</h2>
+                    <h5>Designer <span>& student</span></h5>
+                    <p>Hi, my name is Muhammad Fazreen Bin Azhar. I'm excited to share a bit about myself as an UTM student and a web designer.Despite being a full-time student,
+                        I also focused on doing web designing and also taking commission designing poster banner shirt for my client or university program
+                        Overall, I'm passionate about web design and am constantly seeking new opportunities to learn and grow in my field.
+                        I'm excited about the possibilities that lie ahead and look forward to continuing to make a positive impact.</p>
+                </div>
+
+            </div>
+        </section>
+        <!--SKILLS-->
+        <div class="service">
+            <div class="title2">
+               <h2>My skills</h2>
+            </div>
+       
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h5>Design</h5>
+                <div class="desc">
+                    <p>i'm an expert in designing, i got a lot of customers that i have work with and invloved in many events in the university.
+                        I offer the best price for them since i am a student and hoping to gain more and more experience as i get more jobs.
+                    </p>
+                </div>
+            </div>
+        <div class="card">
+            <i class="fa-solid fa-user"></i>
+            <h5>Coding</h5>
+            <div class="desc">
+                <p>As a Computer Science student, I have experience with a range of coding languages, including HTML, CSS, JavaScript, C++, and Java. 
+                    I'm comfortable working with both front-end and back-end development, and enjoy taking on challenging coding projects. 
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h5>Problem-Solving</h5>
+            <div class="desc">
+                <p>One of my strengths is my ability to identify problems and find effective solutions. 
+                    I've encountered a variety of challenges, and I've learned how to approach them with a calm and analytical mindset.
+                </p> 
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Contact-->
+    <div class="contact">
+        <p>Feel free to reach me on</p>
+        <a class="butt" href="https://instagram.com/fz150yamaha?igshid=ZDdkNTZiNTM="><i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <section class="project">
+        <h1>My Project</h1>
+        <table class="Table">
+            <tr>
+                <td><img src="CID 2022 .png" alt="CID Poster"></td>
+                <td><img src="Gensin.png" alt="Genshin Promo Poster"></td>
+                <td><img src="Main poster opera23.png" alt="Opera23 Main Poster"></td>
+            </tr>
+
+        </table>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <p> Thank you for reading!!</p>
+        <p class="copyright">CopyRight By Ayen</p>
+    </footer>
+    <script>
+        let music= document.getElementById("music");
+        let song= document.getElementById("song");
+        let ctrlIcon= document.getElementById("ctrlIcon");
+
+        song.onloadedmetadata=function(){
+            music.max=song.duration;
+            music.value=song.currentTime;
+        }
+
+        function playPause(){
+            if (ctrlIcon.classList.contains("fa-pause")){
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+            }
+            else{
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+            }
+        }
+
+        //audio volume
+        var audio = document.querySelector('audio');
+        audio.volume = 1;
+
+        if (song.play()){
+            setInterval(()=>{
+                music.value=song.currentTime;
+            },500)
+        }
+
+        music.onchange=function(){
+            song.play();
+            song.currentTime=music.value;
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+        }
+        
+    </script>
+
+    </body>
+</html> 

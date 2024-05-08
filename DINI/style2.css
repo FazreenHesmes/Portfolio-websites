@@ -1,0 +1,334 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Noto Serif SC', serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+header ul{ 
+   position: relative;
+   display: flex;
+   justify-content: right;
+   align-items: right;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+    transition: 1s;
+}
+header ul li a{
+    position: relative;
+    margin:  0 15px;
+    text-decoration: none;
+    color: #000000;
+    transition: 1s;
+}
+header ul li:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+header.sticky{
+    padding: 10px 100px;
+    background: Black;
+}
+header.sticky ul li a{
+    color: white;
+}
+/*Home*/
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image:url(BG.png);
+    background-size: cover;
+    background-position: center;
+}   
+.content{
+    width: 40%;
+    position: absolute;
+    top: 51%;
+    transform: translateY(-50%);
+    text-align: left;
+    margin-left: 90px;
+}
+.content h1{
+    font-family: 'Noto Serif SC', serif;
+    font-size: 55px;
+    margin-top: 40px ;
+    font-weight: 900;
+   
+}
+.content h4{
+    font-size: 20px;  
+    letter-spacing: 2px;
+    line-height: 10px;
+}
+.content p{
+    margin-top: 5%;
+    font-size: 18px;
+    color: #5a5a5a;
+}
+.read{
+    margin-top: 50px;
+}
+button{
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    border-radius: 35px;  
+    background: #9BB9B0;
+    border: none;
+    cursor: pointer;
+    position: relative; 
+    transition: 1s;
+}
+button a{
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+button:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+/*About Me*/
+.aboutme{
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    background-color: #FEFDF9;
+    text-align: center ;
+}
+.me{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.aboutme img{
+    height: auto;
+    width: 360px;
+}
+.container {
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
+  }
+  
+  .container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front h2{
+    font-size: 40px;
+    margin-top: 55%;
+    
+  }
+  
+  .back {
+    background-color: #FFF0ED;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem; 
+  }
+  .back h5{
+    font-size: 20px;
+    color: #000000;
+    padding-top: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .back p{
+    text-align: center;
+    font-size: 13px;
+    color: #5a5a5a;
+    margin-top: 0%;
+    padding-bottom:20% ;
+    padding-left:30px ;
+    padding-right: 30px;
+  }
+
+  /*Skills*/
+#skill{
+    width: 100%;
+    height: 100vh;
+    background-color: #EEF4E8;
+}
+.subtitle{
+    color: Black;
+    font-size: 70px;
+    padding-top: 50px;
+    padding-left: 150px;
+    margin: 30px auto;
+    text-align: left;
+}
+.skill-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.skill-list div{
+    transition: 1s;
+    height: 350px;
+    width: 300px;
+    padding: 20px 35px;
+    background: white ;
+    border-radius: 25px;
+    margin: 20px ;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+}
+.skill-list i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px;
+    color: rgb(240, 42, 148); 
+}
+.skill-list h2{
+    color: black;
+    font-size: 25px;
+    margin-bottom: 15;
+    text-align: center;
+}
+.skill-list p {
+    color: black;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 25px;  
+}
+.skill-list div:hover{
+    background: #9BB9B0;
+    transform: scale(1.065);
+    z-index: 1;
+}
+
+/*Contact*/ 
+.contain{
+    width: 100%;
+    height: 100%;
+    background-color: #FFF0ED;
+}
+.row{
+    justify-content: center;
+}
+.row h2{
+    text-align: right;
+    font-size: 70px;
+    padding-top: 50px;
+    padding-right: 150px;
+}
+.contact-left{
+    align-items: flex-start;
+    padding: 0 150px 0 150px;
+} 
+.contact-right{
+    align-items: flex-start;
+    padding: 0 150px 0 150px;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #000000;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.icon{
+    margin-top: 30px;
+}
+.icon a{
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    display: inline-block;  
+    transition: 1s;
+}
+.icon a:hover{
+    color: black;
+    transform: scale(1.2);
+    z-index: 1;
+}
+.contact-left form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 10px;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.button{
+    font-family: 'Reem Kufi Fun', sans-serif;
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 35px;
+    font-size: 15px;
+    color: white;
+    background: #9BB9B0;
+    border: none;
+    cursor: pointer;
+    position: relative; 
+    transition: 1s;
+}
+.button:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}

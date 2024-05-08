@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet"  href="style2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&family=Reem+Kufi+Fun:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/62556f7ee3.js" crossorigin="anonymous"></script>
+    </head>
+<body> 
+    <header>
+        <div class="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#contactme">Contact me</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--Front Page-->
+    <div id="home">
+    <div class="banner"></div>
+    <div class="content">
+        <h1>Nur Dini Fatini.</h1>
+        <p>I'am a UTM student studying Computer Graphic & Multimedia <br>and this is My Portfolio</p>
+        <div class="read">
+            <button type="button"><a href="#about">READ MORE</a></button>
+        </div>
+    </div>
+    </div>
+     <!--About me-->
+     <div id="about">
+     <section class="aboutme">
+        <div class="me">
+            <img src="Dini.png" alt="My Picture">
+            <div class="container">
+                <div class="card">
+                  <div class="front">
+                    <h2>About Me.</h2>
+                    <h5>Designer & student</h5>
+                  </div>
+                  <div class="back">
+                    <h5>Nur Dini Fatini Binti Mohd Kamal</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+</div>
+
+        <!--Skills-->
+       <section id="skill">
+        <div class="boxsection">
+            <h2 class="subtitle">My Skills.</h2>
+                <div class="skill-list">
+                 <div>
+                    <h2>Lorem Ipsun</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales ex eget tempus cursus. Sed dignissim blandit enim. Suspendisse potenti.
+                    Donec semper velit id bibendum bibendum. Aenean fermentum massa sapien.</p>
+                 </div>
+                 <div>
+                    <h2>Lorem Ipsun</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales ex eget tempus cursus. Sed dignissim blandit enim. Suspendisse potenti.
+                    Donec semper velit id bibendum bibendum. Aenean fermentum massa sapien.</p>
+                 </div>
+                 <div>
+                    <h2>Lorem Ipsun</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales ex eget tempus cursus. Sed dignissim blandit enim. Suspendisse potenti.
+                    Donec semper velit id bibendum bibendum. Aenean fermentum massa sapien.</p>
+                 </div>
+                </div>
+        </div>
+       </div>
+       </section>
+
+       <!--Contact-->
+       <div id="contactme">
+       <section class="contact">
+        <div class="contain">
+            <div class="row">
+                <h2>Contact Me.</h2>
+            <div class="contact-left">
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i>017-6010135</p>
+                <div class="icon">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-left">
+                <form>
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    
+                    <button type="submit">SUBMIT</button>
+                    
+                </form>
+            </div>
+        </div>
+        </div>
+       </section>
+    </div>
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY>0)
+    })
+    
+</script>
+</body>
+</html>
